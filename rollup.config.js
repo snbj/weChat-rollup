@@ -4,7 +4,6 @@ import commonjs from 'rollup-plugin-commonjs';
 
 //import replace from 'rollup-plugin-replace';
 //import uglify from 'rollup-plugin-uglify';
-//import { minify } from 'uglify-js';
 
 import postcss from 'rollup-plugin-postcss';
 import cssnano from 'cssnano';
@@ -15,15 +14,13 @@ export default {
     exports: 'named',
     dest: './dist/app.js',
     moduleName: 'app',
-    useStrict: false,
-    // external: [],
     plugins: [
         postcss({
             plugins: [cssnano()],
             extensions: [ '.css','.wxss' ]
         }),
         nodeResolve({
-            jsnext: true,  // Default: false
+            jsnext: true,
             main: true
         }),
         commonjs(),

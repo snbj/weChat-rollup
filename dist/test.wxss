@@ -1,9 +1,0 @@
-html{
-    background-attachment: #ffffff;
-    color:#fff;
-    border-radius: 50%;
-}
-input{
-    width:100%;
-    height:50px;
-}

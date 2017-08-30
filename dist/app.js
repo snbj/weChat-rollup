@@ -18,6 +18,8 @@ function __$styleInject(css, returnValue) {
   return returnValue;
 }
 
+__$styleInject("html{background:#fff}", undefined);
+
 App({
     __pages: {},
     __run: function __run(id) {
