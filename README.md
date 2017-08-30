@@ -32,12 +32,9 @@
 用 rollup 构建 src 源码到 dist 内
 
 ```shell
-    git clone git@github.com:gogoyqj/wechatAppBoilerplate.git projectPath;
-    cd projectPath;
+    git clone https://github.com/snbj/weChat-rollup.git wechat
+    cd wechat;
     npm install;
-    // make changes
-    xxx
-    // build
     sh init.sh;
 ```
 

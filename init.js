@@ -1,7 +1,3 @@
-/**
- * 读取 app.json，读取页面配置，并创建供 rollup 打包的入口文件 combo.js，将所有 page 打包一起
- * 修改输出精简后 pages/xx/xx.js
- */
 var config = require('./src/app.json');
 var fs     = require('fs');
 var path   = require('path');

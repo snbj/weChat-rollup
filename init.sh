@@ -2,6 +2,7 @@ if [[ ! -d dist ]];then
     mkdir dist
 fi
 paths=$(find src -type dir | sort)
+
 for name in $paths;do
     p=${name/src/dist}
     if [[ ! -d $p ]];then
@@ -10,6 +11,7 @@ for name in $paths;do
 done
 
 files=$(find src -not -name "*.js" -type file)
+
 for file in $files;do
     cp -f $file ${file/src/dist}
 done
@@ -23,8 +25,6 @@ for file in $tmpfiles;do
     fi
 done
 
-# cp src/app.js dist/app.js
-# cp src/config.js dist/config.js
 echo "function __page(routeIndex) {
     return function(e) {
         getApp().__pages[routeIndex] = function() {
