@@ -5,7 +5,7 @@
 
 ### 简介
 
-通过采用 rollup 对项目预先进行构建，合并所有页面代码到 app.js:
+通过采用 webpack 对项目预先进行构建，合并所有页面代码到 app.js:
 
 ```程序入口
     __page(1)({ ... });
@@ -29,7 +29,7 @@
 
 ### 使用
 
-用 rollup 构建 src 源码到 dist 内
+用 webpack 构建 src 源码到 dist 内
 
 ```shell
     git clone https://github.com/snbj/weChat-rollup.git wechat

@@ -1,12 +1,7 @@
 import nodeResolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
-
-//import replace from 'rollup-plugin-replace';
-//import uglify from 'rollup-plugin-uglify';
-
-import postcss from 'rollup-plugin-postcss';
-import cssnano from 'cssnano';
+import uglify from 'rollup-plugin-uglify';
 
 export default {
     entry: './combo.js',
@@ -15,10 +10,6 @@ export default {
     dest: './dist/app.js',
     moduleName: 'app',
     plugins: [
-        postcss({
-            plugins: [cssnano()],
-            extensions: [ '.css','.wxss' ]
-        }),
         nodeResolve({
             jsnext: true,
             main: true
@@ -36,8 +27,11 @@ export default {
                 "external-helpers",
             ]
         }),
-        // replace({
-        // }),
-        //uglify()
+        uglify({
+            compress:{
+                drop_debugger: true,
+                drop_console: true
+              }
+        })
     ]
 };
