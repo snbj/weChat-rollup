@@ -8,7 +8,7 @@ var dist   = './dist/';
 var imgPath = 'images';
 var opts   = {encoding: 'utf8'};
 
-/* 阿里云 打包上传资源图 本地使用 简略图 减少包大小  优化显示体验
+/* 
 var client = new OSS({
   region: '',
   accessKeyId: '',
@@ -24,7 +24,7 @@ fs.readdir(imgPath, function(err, files) {
             console.log(err);
         });
     });
-});  
+});
 */
 
 var comboCode = 'import "' + source + 'app.js' + '";', tmpFiles=[];
