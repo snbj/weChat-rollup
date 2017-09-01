@@ -1,31 +1,10 @@
 var config = require('./src/app.json');
 var fs     = require('fs');
 var path   = require('path');
-//var co     = require('co');
-//var OSS = require('ali-oss');
 var source = './src/';
 var dist   = './dist/';
-var imgPath = 'images';
 var opts   = {encoding: 'utf8'};
 
-/* 
-var client = new OSS({
-  region: '',
-  accessKeyId: '',
-  accessKeySecret: '',
-  bucket: ''
-});
-fs.readdir(imgPath, function(err, files) {
-    files.forEach(function(item) {
-        co(function* () {
-            var name = imgPath+'/'+item;
-            var result = yield client.put(name, name);
-        }).catch(function (err) {
-            console.log(err);
-        });
-    });
-});
-*/
 
 var comboCode = 'import "' + source + 'app.js' + '";', tmpFiles=[];
 config.pages.map(function(page, index) {

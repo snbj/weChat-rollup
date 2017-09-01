@@ -16,6 +16,11 @@ for file in $files;do
     cp -f $file ${file/src/dist}
 done
 
+if [ $1 == "oss" ];then
+    echo 'file img oss';
+    node oss.js
+fi
+
 tmpfiles=$(node init.js)
 rollup -c rollup.config.js
 for file in $tmpfiles;do
