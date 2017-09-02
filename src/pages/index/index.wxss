@@ -1,3 +1,60 @@
-.index-text{
-    color: #f00;
+/*fwefewfewefwef*/
+@import "../../common/lib/weui.wxss";
+
+.container {
+  background: #F3F3F3;
+}
+
+.tip {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #E60013;
+  background: #fff;
+  padding-left: 24rpx;
+}
+
+.custMesTitle, .custDynamicTitle{
+  font-size: 28rpx;
+  color: #888888;
+  padding-left: 20rpx;
+  height: 40rpx;
+  margin-top: 28rpx;
+  margin-bottom: 16rpx;
+}
+
+.custSwitch {
+  margin-left:24rpx;
+  margin-right:24rpx;
+  border-bottom:1px solid #E5E5E5;
+}
+
+.weui-cells:last-child {
+  border-bottom: 0;
+}
+
+.weui-cell {
+  padding: 13rpx 0 13rpx 0;
+}
+
+.weui-cell::before {
+  border-top: 0;
+}
+
+.weui-cell__bd {
+  font-size: 28rpx;
+  color: #757575;
+}
+
+.weui-cell__ft {
+  width: 102rpx;
+  height: 62rpx;
+}
+
+.weui-cells::before {
+  border-top: 0;
+}
+
+.weui-cells::after {
+  border-bottom: 0;
 }

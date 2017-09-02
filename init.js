@@ -4,7 +4,8 @@ var path   = require('path');
 var source = './src/';
 var dist   = './dist/';
 var opts   = {encoding: 'utf8'};
-
+var cleanCSS = require('clean-css');
+var cssMinify = new cleanCSS();
 
 var comboCode = 'import "' + source + 'app.js' + '";', tmpFiles=[];
 config.pages.map(function(page, index) {
@@ -20,4 +21,17 @@ config.pages.map(function(page, index) {
 });
 
 fs.writeFileSync('./combo.js', comboCode, opts);
+
+config.pages.map(function(page, index) {
+    page = page + '.wxss';
+    var _page = dist + path.dirname(page) +'/'+ path.basename(page);
+    fs.readFile(_page,'utf8',(err,data)=>{
+        var min = cssMinify.minify(data);
+        fs.writeFile(_page,min.styles,function(){
+            console.log('success');
+        })
+    });
+});
+
 console.log(tmpFiles.join(' '));
+

@@ -1,3 +1,1 @@
-.index-text{
-    color: #f00;
-}
+.index-text{color:red}.bbb{background:#rff;height:62rpx}
